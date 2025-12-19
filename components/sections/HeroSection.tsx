@@ -27,6 +27,7 @@ export default function HeroSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-glow"></span>
             </span>
             <span className="text-sm text-secondary">Disponible pour de nouvelles opportunités</span>
+            <span className="text-sm text-secondary">Vers l'infini et les lapins</span>
           </motion.div>
 
           {/* Main heading */}
