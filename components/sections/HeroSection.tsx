@@ -27,7 +27,7 @@ export default function HeroSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-glow"></span>
             </span>
             <span className="text-sm text-secondary">Disponible pour de nouvelles opportunités</span>
-            <span className="text-sm text-secondary">Vers l'infini et les lapins</span>
+            {/* <span className="text-sm text-secondary">Vers l'infini et les lapins</span> */}
           </motion.div>
 
           {/* Main heading */}
@@ -38,6 +38,15 @@ export default function HeroSection() {
             className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-accent to-glow bg-clip-text text-transparent"
           >
             Théo
+          </motion.h1>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-accent to-glow bg-clip-text text-transparent"
+          >
+            Inizan
           </motion.h1>
 
           <motion.h2
@@ -96,7 +105,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Scroll indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
@@ -113,7 +122,7 @@ export default function HeroSection() {
               className="w-1.5 h-3 bg-accent rounded-full"
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
