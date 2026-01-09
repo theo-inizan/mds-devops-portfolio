@@ -29,9 +29,21 @@ jobs:
       #   env:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+      - name: Run Unit Tests
+        run: npm run test:ci
+
   build:
     name: Build NextJS
     runs-on: ubuntu-latest
+    needs: test
 
     permissions:
       contents: read
@@ -43,9 +55,6 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-
-      - name: Run Unit Tests
-        run: npm run test:ci
 
       - name: Build NextJS project
         run: npm run build
